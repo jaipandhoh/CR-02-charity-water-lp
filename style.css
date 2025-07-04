@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: Avenir, sans-serif;
+  background-color: #fff7e1;
+  color: #000;
+}
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header a {
+  background-color: #bf6c46;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: Proxima Nova, sans-serif;
+}
+
+/* Style for the logo image to add padding and make it smaller */
+.logo-img {
+  height: 24px;        /* Makes the logo smaller */
+  padding: 16px 0;     /* Adds more space above and below the logo */
+}
+
+.hero {
+  background-color: #77a8bb; /* Blue background for hero section */
+  display: flex;             /* Put text and image side by side */
+  flex-wrap: wrap;           /* Allow items to wrap on small screens */
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.hero-text {
+  flex: 1 1 300px;           /* Allow text to grow and shrink */
+  color: #fff;
+  font-family: Georgia, serif;
+}
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.hero-image {
+  flex: 1 1 300px;           /* Allow image to grow and shrink */
+  text-align: center;
+}
+.hero-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.actions {
+  text-align: center;
+  margin: 2rem 0;
+}
+.actions img {
+  max-width: 100%;
+  height: auto;
+}
+.donate-button {
+  display: block;
+  background-color: #bf6c46;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 2rem auto;
+  width: fit-content;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* 
+  ===========================
+  MEDIA QUERIES FOR MOBILE
+  ===========================
+  Media queries help your website look good on all screen sizes.
+  The code below changes the layout for screens smaller than 600px (like phones).
+*/
+
+/* 
+  Step 1: Start a media query for screens up to 600px wide.
+  This means the styles inside will only apply on small screens (like phones).
+*/
+@media (max-width: 600px) {
+
+  /* Step 2: Stack header items vertically instead of side by side */
+  header {
+    flex-direction: column;    /* Stack logo and link */
+    align-items: flex-start;   /* Align items to the left */
+  }
+
+  /* Step 3: Stack hero section items vertically */
+  .hero {
+    flex-direction: column;    /* Stack text and image */
+    padding: 1rem;             /* Less padding on small screens */
+  }
+
+  /* Step 4: Make hero text and image take full width */
+  .hero-text,
+  .hero-image {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center;        /* Center text on small screens */
+    margin: 0;
+  }
+
+  /* Step 5: Make the donate button fill the width on small screens */
+  .donate-button {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+}
+
+/* 
+  Why use media queries?
+  - Media queries let us change styles for different screen sizes.
+  - This helps the website look good and be easy to use on both computers and phones.
+  - Without media queries, the page might look squished or hard to read on small screens.
+*/
