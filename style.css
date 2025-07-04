@@ -41,11 +41,11 @@ header a {
   font-family: Georgia, serif;
 }
 .hero-text h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   margin-bottom: 1rem;
 }
 .hero-image {
@@ -58,23 +58,30 @@ header a {
 }
 .actions {
   text-align: center;
-  margin: 2rem 0;
+  margin: 2rem 0 0.5rem 0; /* Less bottom margin so the donate button sits closer */
 }
+/* Style for the actions section image */
 .actions img {
-  max-width: 100%;
-  height: auto;
+  max-width: 600px;        /* Makes the image bigger so it stands out more */
+  width: 100%;             /* Makes the image responsive */
+  height: auto;            /* Keeps the image ratio correct */
+  display: block;          /* Removes extra space below the image */
+  margin: 0 auto 0 auto;   /* No top margin so image sits higher */
+  /* max-width controls the largest size the image can be */
+  /* margin: 0 auto centers the image and removes space above */
 }
 .donate-button {
   display: block;
   background-color: #bf6c46;
   color: #fff;
   text-align: center;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem;        /* Smaller padding for a smaller button */
   border-radius: 6px;
   text-decoration: none;
-  font-size: 1.2rem;
-  margin: 2rem auto;
+  font-size: 1.2rem;         /* Smaller text for the button */
+  margin: 0.5rem auto 2rem auto; /* Keeps the button high on the page */
   width: fit-content;
+  font-weight: bold;         /* Makes the button text bold */
 }
 footer {
   text-align: center;
